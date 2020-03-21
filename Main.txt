@@ -1,0 +1,23 @@
+import Interface1.To_code;
+import Parser.Parser1;
+
+import java.util.*;
+
+import java.io.IOException;
+
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        long time = System.currentTimeMillis();
+        Parser1.Parse();
+        HashMap<String, DoText> Sootv = new HashMap<String, DoText>();
+        To_char deshifrator = new To_char();
+        To_code shifrator = new To_code();
+        Sootv.put("1",deshifrator);
+        Sootv.put("0",shifrator);
+    Sootv.get(Parser1.get_command()).ShDsh(Parser1.get_file_name());
+    System.out.println(System.currentTimeMillis() - time);
+    }
+
+}
+
